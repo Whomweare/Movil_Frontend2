@@ -10,7 +10,7 @@ export default function ProductosComponent() {
   const navigation = useNavigation();
 
   const [productos, setProductos] = useState<ProductosInterface[]>([]);
-
+  let objeto;
   const getProductos = async () => {
     try {
       const response = await api.get('tbl_producto');
@@ -36,7 +36,8 @@ export default function ProductosComponent() {
           <View style={styles.productos}>
             <Pressable
               onPress={() => {
-                navigation.navigate('Detalles');
+                objeto = item;
+                navigation.navigate('Detalles', {elemento: objeto});
               }}
             >
               <Image

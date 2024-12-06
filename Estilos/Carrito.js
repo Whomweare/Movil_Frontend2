@@ -95,18 +95,30 @@ const styles = StyleSheet.create({
   contenedorRadio: {
     width: '100%',
     height: '15%',
-    borderRadius: 50,
     flexDirection: 'row',
-    paddingTop: '4%'
+    paddingTop: '4%',
   },
 
   radio: {
-    backgroundColor: 'gray',
-    width: '6%',
-    height: '90%',
+    width: '100%',
+    height: '100%',
     borderRadius: 50,
     marginRight: '2%',
     marginTop: '-0.5%'
+  },
+
+  active: {
+    width: "6%",
+    height: "90%",
+    borderRadius: 50,
+    backgroundColor: 'gray'
+  },
+
+  deactive: {
+    width: "6%",
+    height: "90%",
+    borderRadius: 50,
+     backgroundColor: 'gray'
   },
 
   subTotal: {

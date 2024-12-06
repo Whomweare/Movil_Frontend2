@@ -3,8 +3,10 @@ import { View, Text, Image, Pressable } from 'react-native'
 import styles from '../Estilos/Detalles';
 import { useNavigation } from '@react-navigation/native';
 
-export default function DetallesComponent() {
-
+export default function DetallesComponent({route}) {
+   
+  const {elemento} = route.params;
+  
   const navigation = useNavigation();
 
   return (
@@ -15,13 +17,13 @@ export default function DetallesComponent() {
         style={styles.imagen}
       />
 
-      <Text style={styles.texto}>Nombre: WebGL Book</Text>
-      <Text style={styles.texto}>Talla: 7.5</Text>
-      <Text style={styles.texto}>Inventario: 100</Text>
-      <Text style={styles.texto}>Precio: 500</Text>
+      <Text style={styles.texto}>Nombre: {elemento.nombre}</Text>
+      <Text style={styles.texto}>Talla: {elemento.talla}</Text>
+      <Text style={styles.texto}>Inventario: {elemento.inventario}</Text>
+      <Text style={styles.texto}>Precio: {elemento.precio}</Text>
 
       <Pressable style={styles.pressable} onPress={() => {
-        navigation.navigate('Carrito');
+        navigation.navigate('Carrito', {elemento: elemento});
       }}>
 
         <Text>Agregar al carrito</Text>

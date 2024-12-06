@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { FlatList, Pressable, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   contenedorPrincipal: {
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
 
   productos: {
     width: "50%",
-    height: "25%",
+    height: "20%",
   },
 
   imagen: {
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     height: 200,
   },
 
-
+  
 });
 
 export default styles;

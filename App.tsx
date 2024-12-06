@@ -6,6 +6,7 @@ import ProductosComponent from './Componentes/Productos';
 import DetallesComponent from './Componentes/Detalles';
 import CarritoComponent from './Componentes/Carrito';
 import { createStackNavigator } from '@react-navigation/stack';
+import FacturaComponent from './Componentes/Factura';
 
 type RootStackParamList = {
   Home: undefined;
@@ -15,7 +16,6 @@ type RootStackParamList = {
 const Stack = createStackNavigator<RootStackParamList>();
 
 function HomeScreen() {
-  
   const navigation = useNavigation();
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -29,7 +29,8 @@ const RootStack = createNativeStackNavigator({
   screens: {
     Inicio: HomeScreen,
     Detalles: DetallesComponent,
-    Carrito: CarritoComponent
+    Carrito: CarritoComponent,
+    Factura: FacturaComponent
   },
 });
 
