@@ -7,19 +7,28 @@ const styles = StyleSheet.create({
     padding: "2%"
   },
 
-  header: {
-  width: "100%",
-  height: "10%",
-  backgroundColor: "#afafaf",
-  flexDirection: 'row'
+  headerX: {
+    width: "100%",
+    height: "10%",
+    flexDirection: 'row'
+  },
+
+  headerY: {
+    width: "100%",
+    height: "10%",
+
+    flexDirection: 'row'
   },
 
   headerContent: {
-  width: "20%",
-  height: "100%"
+    width: "20%",
+    height: "100%",
+    backgroundColor: "#afafaf",
+  },
+
+  headerContentText: {
+    width: "20%",
   }
-
-
 });
 
 export default styles;

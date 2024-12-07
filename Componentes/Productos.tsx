@@ -10,7 +10,9 @@ export default function ProductosComponent() {
   const navigation = useNavigation();
 
   const [productos, setProductos] = useState<ProductosInterface[]>([]);
+  
   let objeto;
+
   const getProductos = async () => {
     try {
       const response = await api.get('tbl_producto');
@@ -30,7 +32,7 @@ export default function ProductosComponent() {
       <FlatList
         style={styles.flatList}
         data={productos}
-        keyExtractor={(item) => item.id_Producto.toString()}
+        keyExtractor={(item) => item.id_producto.toString()}
         renderItem={({ item }) => (
 
           <View style={styles.productos}>
@@ -40,12 +42,14 @@ export default function ProductosComponent() {
                 navigation.navigate('Detalles', {elemento: objeto});
               }}
             >
+
               <Image
-                source={{ uri: 'https://th.bing.com/th/id/OIP.qaclxvlJyugAiqShPYObSAAAAA?w=395&h=500&rs=1&pid=ImgDetMain' }}
+                source={{ uri: item.imagen}}
                 style={styles.imagen}
               />
+              
             </Pressable>
-            <Text>{`L. ${item.id_Producto} ${item.nombre}`}</Text>
+            <Text>{`L. ${item.id_producto} ${item.nombre}`}</Text>
           </View>
 
         )}
