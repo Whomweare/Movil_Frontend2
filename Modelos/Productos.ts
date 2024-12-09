@@ -1,7 +1,9 @@
 export interface ProductosInterface {
-    id_Producto: number,
+    id_producto: number,
+    id_categoria: number,
     nombre:string,
     talla: number,
     inventario: number,
-    precio: number
+    precio: number,
+    imagen:Blob
 }

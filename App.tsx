@@ -1,42 +1,43 @@
-import * as React from 'react';
-import { View} from 'react-native';
-import { createStaticNavigation, useNavigation } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import ProductosComponent from './Componentes/Productos';
-import DetallesComponent from './Componentes/Detalles';
-import CarritoComponent from './Componentes/Carrito';
-import { createStackNavigator } from '@react-navigation/stack';
-import FacturaComponent from './Componentes/Factura';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import Navegacion from './Navegacion/Navegacion';
+import { CarritoProvider } from './Context/CarritoContext';
 
-type RootStackParamList = {
-  Home: undefined;
-  Detalles: { itemId: number};
-};
-
-const Stack = createStackNavigator<RootStackParamList>();
-
-function HomeScreen() {
-  const navigation = useNavigation();
+export default function App() {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <ProductosComponent />
-    </View>
+    <CarritoProvider>
+      <NavigationContainer>
+        <Navegacion />
+      </NavigationContainer>
+    </CarritoProvider>
   );
 }
 
-const RootStack = createNativeStackNavigator({
-  initialRouteName: 'Inicio',
-  screens: {
-    Inicio: HomeScreen,
-    Detalles: DetallesComponent,
-    Carrito: CarritoComponent,
-    Factura: FacturaComponent
-  },
-});
 
-const Navigation = createStaticNavigation(RootStack);
+// type RootStackParamList = {
+//   Home: undefined;
+//   Detalles: { itemId: number };
+// };
 
-export default function App() {
+// const Stack = createNativeStackNavigator<RootStackParamList>();
 
-  return <Navigation />;
-}
+// function HomeScreen() {
+//   return (
+//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+//       <ProductosComponent />
+//     </View>
+//   );
+// }
+
+// export default function App() {
+//   return (
+//     <NavigationContainer>
+//       <Stack.Navigator initialRouteName="Inicio">
+//         <Stack.Screen name="Inicio" component={HomeScreen} />
+//         <Stack.Screen name="Detalles" component={DetallesComponent} />
+//         <Stack.Screen name="Carrito" component={CarritoComponent} />
+//         <Stack.Screen name="Factura" component={FacturaComponent} />
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// }

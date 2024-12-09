@@ -1,139 +1,83 @@
 import { StyleSheet } from 'react-native';
 
-const styles = StyleSheet.create({
-  contenedorPrincipal: {
-    width: "100%",
-    height: "100%",
+export default StyleSheet.create({
+  contenedor: {
+    flex: 1,
+    padding: 16,
+    backgroundColor: '#fff',
   },
-
-  help: {
-    width: "100%",
-    height: '30%',
+  item: {
     flexDirection: 'row',
-  },
-
-  contenedorPrimera: {
-    width: "40%",
-    height: "100%",
-  },
-
-  contenedorSegunda: {
-    width: "40%",
-    height: "100%",
-    paddingLeft: '3%',
-  },
-
-  contenedorTercera: {
-    width: '100%',
-    height: '70%',
-    paddingLeft: '2%',
-    paddingTop: '62%',
-  },
-
-  contenedorBotones: {
-    width: "100%",
-    height: "20%",
-    alignItems: 'flex-start',
-    flexDirection: 'row',
-    marginTop: '30%',
-    backgroundColor: '#afafaf',
-  },
-
-  pressable: {
-    width: '30%',
-    height: '100%',
-    justifyContent: 'center',
-    alignContent: 'center',
-  },
-
-  textPressable: {
-    width: '100%',
-    height: '100%',
-    textAlign: 'center',
-    paddingTop: 12,
-  },
-
-  textInput: {
-    width: '40%',
-    height: '100%',
-    textAlign: 'center'
-  },
-
-  textoPrecio: {
-    width: '50%',
-    height: '100%',
-    paddingLeft: '2%',
-    paddingTop: 12,
-    backgroundColor: '#afafaf'
-  },
-
-  imagen: {
-    width: '100%',
-    height: "100%"
-  },
-
-  texto: {
-    width: '100%',
-    height: "20%",
-  },
-
-  pressableComprar: {
-    width: '40%',
-    height: 40,
-
-    borderRadius: 50,
-    alignSelf: 'flex-end',
-    marginTop: 40,
-    marginRight: 10,
-    backgroundColor: '#28A745',
-
-    justifyContent: 'center',
     alignItems: 'center',
-    paddingLeft: '1%',
+    marginBottom: 16,
+    borderBottomWidth: 1,
+    borderColor: '#ccc',
+    paddingBottom: 8,
   },
-
-  contenedorRadio: {
-    width: '100%',
-    height: '15%',
+  imagen: {
+    width: 60,
+    height: 60,
+    marginRight: 16,
+  },
+  texto: {
+    fontSize: 16,
+    flex: 1,
+  },
+  totalContenedor: {
+    marginVertical: 16,
+    alignItems: 'center',
+  },
+  totalTexto: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  boton: {
+    backgroundColor: '#007BFF',
+    padding: 12,
+    alignItems: 'center',
+    marginVertical: 8,
+    borderRadius: 8,
+  },
+  botonComprar: {
+    backgroundColor: '#28A745',
+    padding: 12,
+    alignItems: 'center',
+    marginVertical: 8,
+    borderRadius: 8,
+  },
+  textoBoton: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  cantidadControles: {
     flexDirection: 'row',
-    paddingTop: '4%',
+    alignItems: 'center',
+    marginTop: 5,
+  },
+  
+  botonCantidad: {
+    padding: 10,
+    backgroundColor: '#ddd',
+    borderRadius: 5,
+    marginHorizontal: 5,
+  },
+  
+  textoCantidad: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  
+  botonEliminar: {
+    marginTop: 10,
+    backgroundColor: '#ff4d4d',
+    padding: 5,
+    borderRadius: 5,
+  },
+  
+  textoEliminar: {
+    color: '#fff',
+    fontWeight: 'bold',
   },
 
-  radio: {
-    width: '100%',
-    height: '100%',
-    borderRadius: 50,
-    marginRight: '2%',
-    marginTop: '-0.5%'
-  },
-
-  active: {
-    width: "6%",
-    height: "90%",
-    borderRadius: 50,
-    backgroundColor: 'gray'
-  },
-
-  deactive: {
-    width: "6%",
-    height: "90%",
-    borderRadius: 50,
-     backgroundColor: 'gray'
-  },
-
-  subTotal: {
-    alignSelf: 'flex-end'
-  },
-  contenedorSubTotal: {
-    width: "100%",
-    marginTop: '4%',
-    paddingRight: "4%"
-  },
-
-  hr: {
-    borderWidth: 1,
-    borderColor: '#afafaf'
-  }
 });
-
-export default styles;
