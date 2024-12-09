@@ -5,5 +5,5 @@ export interface ProductosInterface {
     talla: number,
     inventario: number,
     precio: number,
-    imagen:Blob
+    imagen: string
 }

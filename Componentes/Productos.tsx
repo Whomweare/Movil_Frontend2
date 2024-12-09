@@ -11,8 +11,7 @@
 
 //   const navigation = useNavigation();
 
-//   const [productos, setProductos] = useState<ProductosInterface[]>([]);
-//   let objeto;
+
 
 
 //   const getProductos = async () => {
@@ -24,12 +23,7 @@
 //     }
 //   };
 
-  
 
-//   useEffect(() => {
-//     getProductos();
-    
-//   }, []);
 
   
 //   return (
