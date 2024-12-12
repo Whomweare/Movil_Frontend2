@@ -6,12 +6,12 @@ import { CarritoContext } from '../../Context/CarritoContext';
 import styles from '../../Estilos/Carrito';
 
 export default function CarritoScreen() {
-  
+
   const { carrito, limpiarCarrito, sumarCantidad, restarCantidad } = useContext(CarritoContext);
   const navigation = useNavigation();
 
   const total = carrito.reduce((suma, item) => suma + (parseFloat(item.precio) || 0), 0);
-  
+
 
   const manejarCompra = () => {
     Alert.alert('Compra realizada', '¡Gracias por tu compra!');
@@ -28,19 +28,11 @@ export default function CarritoScreen() {
         renderItem={({ item }) => (
           <View style={styles.item}>
             <Image source={{ uri: item.imagen }} style={styles.imagen} />
-            <Text style={styles.texto}>{item.nombre}</Text>
-            <Text style={styles.texto}>{item.precio}</Text>
-            
-            <View style={styles.botonesCantidad}>
-                {/* <Pressable style={styles.botonCantidad} onPress={() => restarCantidad(item.id_producto)}>
-                  <Text style={styles.textoBoton}>-</Text>
-                </Pressable> */}
-                <Text style={styles.texto}>{item.cantidad}</Text>
-                {/* <Pressable style={styles.botonCantidad} onPress={() => sumarCantidad(item.id_producto)}>
-                  <Text style={styles.textoBoton}>+</Text>
-                </Pressable> */}
-              </View>
-            
+            <Text style={styles.texto}>Nombre: {item.nombre}</Text>
+            <Text style={styles.texto}>Precio: L.{item.precio}</Text>
+            <Text style={styles.texto}>Cantidad: {item.cantidad}</Text>
+        
+
           </View>
         )}
       />
@@ -54,7 +46,7 @@ export default function CarritoScreen() {
       <Pressable style={styles.botonComprar} onPress={manejarCompra}>
         <Text style={styles.textoBoton}>Comprar</Text>
       </Pressable>
-   
+
     </View>
   );
 }

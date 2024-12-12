@@ -23,7 +23,7 @@ export default function DetalleScreen({ route }: { route: DetalleRouteProp }) {
       <Image source={{ uri: producto.imagen }} style={styles.imagen} />
       <Text style={styles.texto}>{producto.id_producto}</Text>
       <Text style={styles.texto}>{producto.nombre}</Text>
-      <Text style={styles.texto}>Precio: ${producto.precio}</Text>
+      <Text style={styles.texto}>Precio: L {producto.precio}</Text>
      
       <Pressable style={styles.boton} onPress={botonAgregarAlCarrito}>
         <Text style={styles.textoBoton}>Agregar al Carrito</Text>

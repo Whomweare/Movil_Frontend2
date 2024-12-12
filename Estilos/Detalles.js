@@ -8,10 +8,11 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   imagen: {
-    width: 200,
-    height: 200,
+    width: 300,
+    height: 300,
     resizeMode: 'contain',
     marginBottom: 20,
+    borderRadius: 20
   },
   texto: {
     fontSize: 18,
