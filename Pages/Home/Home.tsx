@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, Image, Pressable } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, RouteProp } from '@react-navigation/native';
 import api from '../../Servicios/Api';
-import styles from '../../Estilos/Productos';
+import styles from '../../Estilos/Inicio';
 import { ProductosInterface } from '../../Modelos/Productos';
 
 // interface ProductosInterface {
@@ -11,6 +11,14 @@ import { ProductosInterface } from '../../Modelos/Productos';
 //   price: number;
 //   image: string;
 // }
+
+import { RootStackParamList } from '../../type'; 
+
+type DetalleRouteProp = RouteProp<RootStackParamList, 'Detalle'>;
+
+interface Props {
+  route: DetalleRouteProp;
+}
 
 export default function InicioScreen() {
   const [productos, setProductos] = useState<ProductosInterface[]>([]);
@@ -30,7 +38,7 @@ export default function InicioScreen() {
   }, []);
 
   return (
-    <View style={styles.contenedorPrincipal}>
+    <View style={styles.contenedor}>
       <FlatList
         data={productos}
         keyExtractor={(item) => item.id_producto.toString()}
@@ -41,6 +49,7 @@ export default function InicioScreen() {
           >
             <Image source={{ uri: item.imagen.toString() }} style={styles.imagen} />
             <Text style={styles.texto}>{item.nombre}</Text>
+            
           </Pressable>
         )}
       />

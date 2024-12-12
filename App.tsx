@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import Navegacion from './Navegacion/Navegacion';
+import tabNavegation from './Navegacion/TabNavigation';
 import { CarritoProvider } from './Context/CarritoContext';
 
 export default function App() {
@@ -8,7 +9,10 @@ export default function App() {
     <CarritoProvider>
       <NavigationContainer>
         <Navegacion />
+     
+        
       </NavigationContainer>
+      
     </CarritoProvider>
   );
 }

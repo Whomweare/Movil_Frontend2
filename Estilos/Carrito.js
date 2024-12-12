@@ -3,81 +3,65 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   contenedor: {
     flex: 1,
-    padding: 16,
+    padding: 10,
     backgroundColor: '#fff',
   },
   item: {
     flexDirection: 'row',
+    marginBottom: 15,
     alignItems: 'center',
-    marginBottom: 16,
     borderBottomWidth: 1,
     borderColor: '#ccc',
-    paddingBottom: 8,
+    paddingBottom: 10,
   },
   imagen: {
-    width: 60,
-    height: 60,
-    marginRight: 16,
+    width: 70,
+    height: 70,
+    marginRight: 15,
+    borderRadius: 5,
+  },
+  infoProducto: {
+    flex: 1,
   },
   texto: {
     fontSize: 16,
-    flex: 1,
+    marginBottom: 5,
+  },
+  botonesCantidad: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  botonCantidad: {
+    backgroundColor: '#007bff',
+    padding: 5,
+    marginHorizontal: 5,
+    borderRadius: 5,
+  },
+  textoBoton: {
+    color: '#fff',
+    fontSize: 18,
   },
   totalContenedor: {
-    marginVertical: 16,
+    paddingVertical: 10,
     alignItems: 'center',
+    borderTopWidth: 1,
+    borderColor: '#ccc',
   },
   totalTexto: {
     fontSize: 20,
     fontWeight: 'bold',
   },
   boton: {
-    backgroundColor: '#007BFF',
-    padding: 12,
+    backgroundColor: '#28a745',
+    padding: 10,
+    marginVertical: 10,
+    borderRadius: 5,
     alignItems: 'center',
-    marginVertical: 8,
-    borderRadius: 8,
   },
   botonComprar: {
-    backgroundColor: '#28A745',
-    padding: 12,
-    alignItems: 'center',
-    marginVertical: 8,
-    borderRadius: 8,
-  },
-  textoBoton: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-  cantidadControles: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginTop: 5,
-  },
-  
-  botonCantidad: {
+    backgroundColor: '#dc3545',
     padding: 10,
-    backgroundColor: '#ddd',
     borderRadius: 5,
-    marginHorizontal: 5,
+    alignItems: 'center',
   },
-  
-  textoCantidad: {
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-  
-  botonEliminar: {
-    marginTop: 10,
-    backgroundColor: '#ff4d4d',
-    padding: 5,
-    borderRadius: 5,
-  },
-  
-  textoEliminar: {
-    color: '#fff',
-    fontWeight: 'bold',
-  },
-
 });
